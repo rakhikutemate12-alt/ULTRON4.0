@@ -1,0 +1,191 @@
+
+/* ULTRON AI 4.0 — RESPONSIVE INTERFACE */
+
+@media (max-width: 1000px) {
+    .sidebar {
+        width: 215px;
+        min-width: 215px;
+    }
+
+    .core-stage {
+        width: 330px;
+        height: 300px;
+    }
+
+    .suggestions {
+        max-width: 650px;
+    }
+}
+
+@media (max-width: 700px) {
+    .app-container {
+        padding: 0;
+        gap: 0;
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 260px;
+        min-width: 260px;
+        border-radius: 0 17px 17px 0;
+        transform: translateX(-105%);
+        transition: transform .3s ease;
+        z-index: 30;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .main-area {
+        width: 100%;
+        border: 0;
+        border-radius: 0;
+    }
+
+    .topbar {
+        height: 57px;
+        min-height: 57px;
+        padding: 0 14px;
+    }
+
+    .menu-btn {
+        display: block;
+        color: var(--cyan);
+    }
+
+    .topbar-title {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .model-status {
+        font-size: 8px;
+    }
+
+    .chat-area {
+        padding: 12px;
+    }
+
+    .welcome-screen {
+        justify-content: center;
+        padding: 10px 5px 20px;
+    }
+
+    .system-overline {
+        font-size: 7px;
+        letter-spacing: 1px;
+        gap: 6px;
+    }
+
+    .overline-line {
+        width: 18px;
+    }
+
+    .core-stage {
+        width: min(330px, 90vw);
+        height: min(290px, 76vw);
+        min-height: 220px;
+    }
+
+    .core-caption {
+        font-size: 8px;
+    }
+
+    .welcome-heading h1 {
+        font-size: clamp(23px, 7vw, 34px);
+    }
+
+    .welcome-heading p {
+        font-size: 11px;
+    }
+
+    .welcome-kicker {
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    .suggestions {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        max-width: 420px;
+        margin-top: 20px;
+    }
+
+    .suggestion-card {
+        min-height: 53px;
+        padding: 9px 12px;
+    }
+
+    .suggestion-card strong {
+        font-size: 11px;
+    }
+
+    .suggestion-card small {
+        font-size: 9px;
+    }
+
+    .creator-credit {
+        font-size: 7px;
+        margin-top: 15px;
+    }
+
+    .input-footer {
+        padding: 10px 10px 12px;
+    }
+
+    .input-shell {
+        min-height: 49px;
+        padding-left: 12px;
+    }
+
+    #messageInput {
+        font-size: 12px;
+    }
+
+    .voice-btn, .send-btn {
+        width: 35px;
+        height: 35px;
+    }
+
+    .input-disclaimer {
+        font-size: 7px;
+    }
+
+    .message {
+        padding: 13px;
+    }
+
+    .message-content {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    .topbar-title {
+        font-size: 8px;
+    }
+
+    .model-status {
+        font-size: 7px;
+    }
+
+    .core-stage {
+        min-height: 200px;
+    }
+
+    .welcome-heading h1 {
+        font-size: 23px;
+    }
+
+    .system-overline {
+        font-size: 6px;
+    }
+
+    .suggestion-card {
+        min-height: 48px;
+    }
+}

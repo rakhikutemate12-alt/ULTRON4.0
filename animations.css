@@ -1,0 +1,109 @@
+
+/* ULTRON AI 4.0 — CINEMATIC MOTION SYSTEM */
+
+@keyframes statusBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .35; }
+}
+
+@keyframes auraPulse {
+    0%, 100% {
+        opacity: .55;
+        transform: scale(.85);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+}
+
+@keyframes messageIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fallbackOrbit {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes fallbackOrbitReverse {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+}
+
+@keyframes fallbackPulse {
+    0%, 100% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+    50% {
+        transform: scale(1.12);
+        filter: brightness(1.4);
+    }
+}
+
+@keyframes scanLine {
+    0% { transform: translateY(-100%); opacity: 0; }
+    15% { opacity: .25; }
+    85% { opacity: .25; }
+    100% { transform: translateY(100%); opacity: 0; }
+}
+
+.fallback-ring.ring-one {
+    animation: fallbackOrbit 14s linear infinite;
+}
+
+.fallback-ring.ring-two {
+    animation: fallbackOrbitReverse 9s linear infinite;
+}
+
+.fallback-ring.ring-three {
+    animation: fallbackOrbit 6s linear infinite;
+}
+
+.fallback-orb {
+    animation: fallbackPulse 3s ease-in-out infinite;
+}
+
+.core-stage::after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: 10%;
+    height: 1px;
+    pointer-events: none;
+    background: linear-gradient(90deg, transparent, rgba(0, 217, 255, .45), transparent);
+    box-shadow: 0 0 12px rgba(0, 217, 255, .35);
+    animation: scanLine 5s ease-in-out infinite;
+    z-index: 4;
+}
+
+.suggestion-card {
+    animation: messageIn .7s ease both;
+}
+
+.suggestion-card:nth-child(2) {
+    animation-delay: .12s;
+}
+
+.suggestion-card:nth-child(3) {
+    animation-delay: .24s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fallback-ring,
+    .fallback-orb,
+    .core-aura,
+    .core-stage::after,
+    .suggestion-card {
+        animation: none !important;
+    }
+}

@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#030611">
+    <title>ULTRON AI 4.0 | Beyond Intelligence</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+<div class="app-container">
+
+    <aside class="sidebar" id="sidebar">
+        <div class="brand">
+            <div class="brand-symbol">U</div>
+            <div>
+                <div class="brand-name">ULTRON</div>
+                <div class="brand-version">AI SYSTEM 4.0</div>
+            </div>
+        </div>
+
+        <button class="new-chat-btn" id="newChatBtn">
+            <span>＋</span> New Conversation
+        </button>
+
+        <div class="sidebar-label">WORKSPACE</div>
+
+        <nav class="sidebar-nav">
+            <button class="nav-item active" type="button">◈ <span>AI Assistant</span></button>
+            <button class="nav-item" type="button">▤ <span>Documents</span></button>
+            <button class="nav-item" type="button">◉ <span>Voice Studio</span></button>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="system-status">
+                <span class="status-dot"></span>
+                <span>SYSTEM READY</span>
+            </div>
+            <div class="creator">DESIGNED BY ASHRUT GACHAKE</div>
+        </div>
+    </aside>
+
+    <main class="main-area">
+
+        <header class="topbar">
+            <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+            <div class="topbar-title">INTELLIGENCE INTERFACE</div>
+            <div class="model-status">
+                <span class="status-dot"></span>
+                ULTRON CORE
+            </div>
+        </header>
+
+        <section class="chat-area" id="chatArea">
+
+            <div class="welcome-screen" id="welcomeScreen">
+
+                <div class="system-overline">
+                    <span class="overline-line"></span>
+                    NEXT GENERATION ARTIFICIAL INTELLIGENCE
+                    <span class="overline-line"></span>
+                </div>
+
+                <div class="core-stage">
+                    <div class="core-aura"></div>
+
+                    <canvas id="ultron3d" aria-label="Animated three-dimensional ULTRON energy core"></canvas>
+
+                    <div class="core-fallback" aria-hidden="true">
+                        <div class="fallback-ring ring-one"></div>
+                        <div class="fallback-ring ring-two"></div>
+                        <div class="fallback-ring ring-three"></div>
+                        <div class="fallback-orb">U</div>
+                    </div>
+
+                    <div class="core-caption">NEURAL CORE <span>● ONLINE</span></div>
+                </div>
+
+                <div class="welcome-heading">
+                    <div class="welcome-kicker">YOUR INTELLIGENCE. REIMAGINED.</div>
+                    <h1>BEYOND <span>INTELLIGENCE</span></h1>
+                    <p>A new dimension of thinking begins here.</p>
+                </div>
+
+                <div class="suggestions">
+                    <button class="suggestion-card" data-prompt="Hello ULTRON, introduce yourself.">
+                        <span class="suggestion-icon">✧</span>
+                        <span><strong>Meet ULTRON</strong><small>Discover your AI assistant</small></span>
+                        <span class="suggestion-arrow">↗</span>
+                    </button>
+
+                    <button class="suggestion-card" data-prompt="Explain artificial intelligence in simple words.">
+                        <span class="suggestion-icon">⌘</span>
+                        <span><strong>Explore knowledge</strong><small>Learn something new</small></span>
+                        <span class="suggestion-arrow">↗</span>
+                    </button>
+
+                    <button class="suggestion-card" data-prompt="Help me plan my day.">
+                        <span class="suggestion-icon">◷</span>
+                        <span><strong>Plan your day</strong><small>Organize your ideas</small></span>
+                        <span class="suggestion-arrow">↗</span>
+                    </button>
+                </div>
+
+                <p class="creator-credit">Designed by Ashrut Gachake</p>
+            </div>
+
+            <div id="messages" class="messages"></div>
+        </section>
+
+        <footer class="input-footer">
+            <div class="input-shell">
+                <textarea id="messageInput" rows="1" maxlength="4000"
+                    placeholder="Message ULTRON..." aria-label="Message ULTRON"></textarea>
+
+                <div class="input-actions">
+                    <button id="voiceBtn" class="voice-btn" type="button" aria-label="Start voice input">◉</button>
+                    <button id="sendBtn" class="send-btn" type="button" aria-label="Send message">↑</button>
+                </div>
+            </div>
+            <div class="input-disclaimer">ULTRON AI CAN MAKE MISTAKES. VERIFY IMPORTANT INFORMATION.</div>
+        </footer>
+
+    </main>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/memory.js"></script>
+<script src="js/chat.js"></script>
+<script src="js/voice.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/3d-core.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
